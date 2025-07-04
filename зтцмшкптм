@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Натуральные товары — Белье, масла, мыло</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fcfcf9;
+      margin: 0;
+      padding: 40px 20px;
+      color: #2e2e2e;
+      line-height: 1.5;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #3a7d44;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      color: #5a5a5a;
+      margin-bottom: 40px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto 50px auto;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+    }
+    .card img {
+      max-width: 180px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      font-size: 1.3em;
+      color: #3a7d44;
+      text-align: center;
+    }
+    .card p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+      min-height: 60px;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-bottom: 25px;
+      color: #3a7d44;
+    }
+    button {
+      background-color: #3a7d44;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 36px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #2e6535;
+    }
+
+    /* Отзывы */
+    .reviews {
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+    .reviews h2 {
+      font-weight: 700;
+      font-size: 2em;
+      margin-bottom: 25px;
+      color: #3a7d44;
+    }
+    .review {
+      background: #e8f0e8;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #4a4a4a;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .review span {
+      display: block;
+      margin-top: 12px;
+      font-weight: 700;
+      color: #2e2e2e;
+    }
+
+    /* Форма заказа */
+    .order-section {
+      max-width: 450px;
+      margin: 0 auto 70px auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .order-section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #3a7d44;
+      font-weight: 700;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, select, textarea {
+      padding: 12px 15px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1.5px solid #bfc9bfc9;
+      transition: border-color 0.3s ease;
+      resize: none;
+      font-family: 'Montserrat', sans-serif;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #3a7d44;
+      box-shadow: 0 0 6px #3a7d44aa;
+    }
+    textarea {
+      height: 80px;
+    }
+    .submit-btn {
+      background-color: #3a7d44;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px;
+      font-size: 1.1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #2e6535;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #999;
+      padding-bottom: 30px;
+    }
+
+    @media(max-width: 400px) {
+      body {
+        padding: 20px 10px;
+      }
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Натуральные товары для истинных ценителей</h1>
+  <p class="subtitle">Экологичное белье, эфирные масла, натуральное мыло и всё, что заботится о вашем здоровье и красоте.</p>
+
+  <div class="products">
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=180&q=80" alt="Натуральное белье" />
+      <h3>Экологичное белье</h3>
+      <p>Мягкое и дышащее белье из органического хлопка для вашего комфорта.</p>
+      <div class="price">1500 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Экологичное белье')">Купить</button>
+    </div>
+
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=180&q=80" alt="Эфирное масло" />
+      <h3>Эфирное масло лаванды</h3>
+      <p>Чистое масло для расслабления и ароматерапии, 100% натуральное.</p>
+      <div class="price">900 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Эфирное масло лаванды')">Купить</button>
+    </div>
+
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1563201517-9eac54550b9e?auto=format&fit=crop&w=180&q=80" alt="Ручное мыло" />
+      <h3>Ручное мыло с мёдом</h3>
+      <p>Натуральное мыло ручной работы с питательными маслами и ароматом меда.</p>
+      <div class="price">500 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Ручное мыло с мёдом')">Купить</button>
+    </div>
+
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=180&q=80" alt="Ароматические свечи" />
+      <h3>Ароматические свечи</h3>
+      <p>Свечи из соевого воска с успокаивающими натуральными ароматами.</p>
+      <div class="price">650 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Ароматические свечи')">Купить</button>
+    </div>
+  </div>
+
+  <section class="reviews">
+    <h2>Отзывы наших покупателей</h2>
+    <div class="review">
+      «Очень понравилось белье, мягкое и не вызывает аллергии. Спасибо!» 
+      <span>— Мария, Москва</span>
+    </div>
+    <div class="review">
+      «Масло лаванды действительно помогает расслабиться после трудного дня.» 
+      <span>— Андрей, Санкт-Петербург</span>
+    </div>
+    <div class="review">
+      «Ручное м
