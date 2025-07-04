@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Натуральные товары — Белье, масла, мыло</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 15px rgb(0 0 0 / 0.15);
+    }
+    .card img {
+      max-width: 150px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0 0 10px 0;
+      font-weight: 600;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    .card p {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #2a8fbd;
+    }
+    button {
+      background-color: #2a8fbd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #216f94;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #999;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Натуральные товары для настоящих ценителей</h1>
+
+  <div class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/150?text=Белье" alt="Натуральное белье" />
+      <h3>Натуральное белье</h3>
+      <p>Комфортное и экологичное белье из натуральных тканей.</p>
+      <div class="price">1500 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Натуральное белье')">Купить</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/150?text=Масло" alt="Эфирное масло" />
+      <h3>Эфирное масло</h3>
+      <p>Чистое эфирное масло для ароматерапии и ухода.</p>
+      <div class="price">800 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Эфирное масло')">Купить</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/150?text=Мыло" alt="Ручное мыло" />
+      <h3>Ручное мыло</h3>
+      <p>Мыло ручной работы с натуральными ингредиентами.</p>
+      <div class="price">450 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Ручное мыло')">Купить</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/150?text=Свечи" alt="Ароматические свечи" />
+      <h3>Ароматические свечи</h3>
+      <p>Свечи из соевого воска с натуральными ароматами.</p>
+      <div class="price">600 ₽</div>
+      <button onclick="alert('Добавлено в корзину: Ароматические свечи')">Купить</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Натуральные товары. Все права защищены.
+  </footer>
+
+</body>
+</html>
